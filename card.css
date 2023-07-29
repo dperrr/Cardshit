@@ -107,6 +107,10 @@ footer{
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (min-width: 600px) {
 
+    nav{
+        font-size: 1rem;
+    }
+    
     .card{
         width: min(100%, 300px);
     }
