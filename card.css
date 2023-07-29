@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+nav{
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a, nav a:visited{
+    color: black;
+}
+
+nav a:hover, nav a:focus{
+    color: hsl(0, 0%, 20%, 0.6);
+}
+
+
+
+body{
+    font: 1.5rem 'Roboto', sans-serif;
+    min-height: 100vh;
+    color: #ffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #475596;
+    background-image: linear-gradient(#007bff, #8a2be2);    
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.card{
+    scroll-margin-top: 8rem;
+    width: min(100%, 240px);
+    background-color: rgba(0, 0, 0, 0.587);
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.261), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card figure{ 
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card figcaption{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+
+.card img{
+    border: 3px double black;
+    border-radius: 50%;
+}
+
+main{
+    flex-grow: 1;
+}
+
+header{
+    top: 0;
+}
+
+header, footer{
+    position: sticky;
+    background-color: grey;
+    background-image: inherit;
+    text-align: center;
+}
+footer{
+    bottom: 0;
+}
+
+    
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+
+    .card{
+        width: min(100%, 300px);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    nav{
+        display: none;
+    }
+
+    .card{
+        width: min(100%, 325px);
+    }
+
+    .card figure{
+        flex-flow: column-reverse;
+    }
+
+    .card figcaption {
+        margin: 0.1em 0;
+    }
+
+    .card p {
+        margin-top: 1rem;
+    }
+
+    
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+    .card{
+        width: min(100%, 400px);
+    }
+    
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+    main{
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: space-evenly;
+    }
+
+    .card{
+        width: min(100%, 400px);
+        
+    }
+    
+    .card:nth-child(3){
+        order: -1;
+    }
+    
+}
