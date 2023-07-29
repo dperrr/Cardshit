@@ -130,10 +130,6 @@ footer{
         flex-flow: column-reverse;
     }
 
-    .card figcaption {
-        margin: 0.1em 0;
-    }
-
     .card p {
         margin-top: 1rem;
     }
@@ -168,4 +164,27 @@ footer{
         order: -1;
     }
     
+}@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    
+    h1{
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+    
+    main {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .card{
+        width: min(calc(33% - 0.25rem)250px);
+    }
+
+    .card figcaption, .card p{
+        font-size: 1.25rem;
+    }
 }
