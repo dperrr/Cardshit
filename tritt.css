@@ -1,0 +1,196 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 50px auto 50px;
+  grid-template-areas:
+    "top top top top top top top top top"
+    "sb mn mn mn mn mn mn mn mn"
+    "ft ft ft ft ft ft ft ft ft";
+  gap: 0.5em;
+  min-height: 100vh;
+}
+
+/* Top nav starts here */
+.top-nav {
+  grid-area: top;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 241, 241);
+  padding: 10px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  color: white;
+}
+/* Top nave ends here */
+
+.container {
+  grid-area: mn;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(267px, auto);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-left: 1rem;
+}
+
+.sidebar.footer {
+  background-color: rebeccapurple;
+  color: white;
+  display: grid;
+  place-content: center;
+}
+
+/* Sidebar starts here */
+.sidebar {
+  grid-area: sb;
+  background-color: #ccc9c9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex; 
+  flex-direction: column; 
+  justify-content: start;
+  align-items: space-between; 
+  padding: 10px;
+  height: 100%;
+}
+
+aside.sidebar h2 {
+  color: #444;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+aside.sidebar p {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+}
+
+aside.sidebar ul {
+  font-size: 1rem;
+  list-style-type: disc;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+}
+
+
+aside.sidebar .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+aside.sidebar .social-icon {
+
+  font-size: 2rem; 
+  margin: 0 0.5rem;
+}
+
+aside.sidebar .social-icon:hover {
+  color: #3071a9;
+}
+/* sidebar ends here */
+
+
+/* Footer starts here */
+.footer {
+  grid-area: ft;
+  background-color: lightgreen;
+  margin-top: auto;
+  padding: 10px;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Footer ends here */
+
+.container .box{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box {
+  width: 400px;
+  height: auto;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.burger-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 1rem;
+  text-align: space-between;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.2em 1em 0 0.5em;
+}
+
+.add-to-cart-button {
+  position: absolute;
+  bottom: 0.2em;
+  left: 70%;
+  background-color: transparent; 
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.3rem 0.2rem;
+  font-size: 1rem;
+  border: none; 
+  margin: 1rem 0.5rem 0.2rem 1rem;
+}
+
+.add-to-cart-button i {
+ 
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+
+
+
